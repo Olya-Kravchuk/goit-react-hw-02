@@ -1,6 +1,6 @@
 import React from "react";
 
-const Feedback = (feedbackCounter) => {
+const Feedback = ({ feedbackCounter, total, positiveFeedback }) => {
   return (
     <div>
       <ul>
@@ -14,10 +14,12 @@ const Feedback = (feedbackCounter) => {
           <p>Neutral: {feedbackCounter.neutral}</p>
         </li>
         <li>
-          <p>Total: </p>
+          <p>
+            Total: <b>{total}</b>
+          </p>
         </li>
         <li>
-          <p>Positive: </p>
+          <p>Positive: {positiveFeedback} </p>
         </li>
       </ul>
     </div>
